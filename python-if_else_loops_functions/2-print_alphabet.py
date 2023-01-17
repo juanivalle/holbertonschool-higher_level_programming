@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-def listAlphabet():
-  return list(map(chr, range(97, 123)))
-
-print (listAlphabet())
+for i in range (97,123):
+	print (format (chr(i)), end="")
 
