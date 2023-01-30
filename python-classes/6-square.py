@@ -33,7 +33,7 @@ class Square:
     def position(self, value):
         self.__position = value
         for i in (self.__position):
-            if not isinstance(self.__position[i], int):
+            if not isinstance(self.__position[1], int):
                 raise TypeError("positionmustbeatuple of 2 positive integers")
 
     def area(self):
