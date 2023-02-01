@@ -5,12 +5,12 @@ def text_indentation(text):
     for i in text:
         if i == ".":
             print(".")
-            print("\n")
+            print("")
         if i == "?":
             print("?")
-            print("\n")
+            print("")
         if i == ":":
             print(":")
-            print("\n")
+            print("")
         i = i.strip("., ?, :")
         print("{}".format(i), end="")
