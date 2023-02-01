@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Divides a given matrix by a given number"""
+
+
 def matrix_divided(matrix, div):
+    """div the matrix"""
     error = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) is not list or len(matrix) == 0 or len(matrix[0]) == 0:
         raise TypeError(error)

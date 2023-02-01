@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Adds two integers"""
+
+
 def add_integer(a, b=98):
+    """Function that adds two integers."""
     if isinstance(a, float) or isinstance(b, float):
         a = int(a)
         b = int(b)

@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Write a class Square that defines a square"""
 
+
 def print_square(size):
+    """With a given number this function prints a square"""
     if not size:
         return
     if not isinstance(size, int):
