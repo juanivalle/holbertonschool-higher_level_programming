@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """text_indentation module"""
 
+
 def text_indentation(text):
     """Replaces ', . :' for the same char + 2 \n"""
     if not isinstance(text, str):
