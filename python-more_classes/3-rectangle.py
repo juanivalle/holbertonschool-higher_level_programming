@@ -52,7 +52,7 @@ class Rectangle:
         else:
             perimeter = (self.__height + self.__width) * 2
         return(perimeter)
-    
+
     def __str__(self):
         rec = ""
         if self.__height is 0 or self.__width is 0:
@@ -60,6 +60,6 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 rec += ("#" * self.__width)
-                if (i < self.__height -1):
+                if (i < self.__height - 1):
                     rec += ("\n")
         return rec
