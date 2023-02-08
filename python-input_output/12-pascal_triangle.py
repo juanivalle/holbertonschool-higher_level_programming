@@ -3,6 +3,8 @@
 
 
 def pascal_triangle(n):
+    """comments"""
+
     triangle = []
     row = []
     pre = []
