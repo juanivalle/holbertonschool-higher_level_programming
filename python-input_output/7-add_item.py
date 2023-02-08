@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Load, add, save"""
+"""load, add, save"""
 
 
 import sys
@@ -14,5 +14,5 @@ except FileNotFoundError:
     save_to_json_file(objeto, filename)
 else:
     for i in objeto:
-    py_lsit.append(i)
+        py_lsit.append(i)
     save_to_json_file(py_list, filename)
