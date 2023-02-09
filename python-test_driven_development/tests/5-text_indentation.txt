@@ -39,8 +39,8 @@ Hola.
 <BLANKLINE>
 a
 
->>> text_indentation("       Euge  \n Hola\n         :p  ")
-Euge
+>>> text_indentation("       Pepe  \n Hola\n         :p  ")
+Pepe
 Hola
 :
 <BLANKLINE>
@@ -50,8 +50,8 @@ p
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation("   Euge  todo       . bien     ?? ")
-Euge  todo       .
+>>> text_indentation("   Pepe  todo       . bien     ?? ")
+Pepe  todo       .
 <BLANKLINE>
 bien     ?
 <BLANKLINE>
