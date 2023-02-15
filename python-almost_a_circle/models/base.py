@@ -3,6 +3,7 @@
 comments
 """
 
+
 class Base:
     """
     comments
@@ -16,8 +17,6 @@ class Base:
 
         if id is not None:
             self.id = id
-
         else:
-           Base.__nb_objects += 1
-           self.id = self.__nb_objects
-
+            Base.__nb_objects += 1
+            self.id = self.__nb_objects
