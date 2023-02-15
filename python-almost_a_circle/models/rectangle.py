@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""comments
-"""
+"""comments"""
 
 
 Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """defines a rectangle
-    """
+    """defines a rectangle"""
 
-    def __init__(self, width, height, x=0, y=0, id=None)
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """comments"""
+
         self.width = width
         self.height = height
         self.x = x
