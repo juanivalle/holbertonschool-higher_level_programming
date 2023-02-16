@@ -83,3 +83,6 @@ class Rectangle(Base):
                 if (i < self.__height - 1):
                     print()
         print()
+
+    def __str__(self):
+        return(f"Rectangle((id){self.__x:d} / {self.__y:d} {self.__width:d} / {self.__height:d})")
