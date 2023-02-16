@@ -90,3 +90,9 @@ class Rectangle(Base):
         c = self.__width
         e = self.__height
         return(f"[Rectangle] ({id}) {a:d}/{b:d} - {c:d}/{e:d}")
+
+    def update(self, *args):
+        """comments"""
+
+        args = (id, self.__width, self.__height, self.__x, self.__y)
+        print("[rectangle] ({}) {}/{} - {}/{}".format(args))
