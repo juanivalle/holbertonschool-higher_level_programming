@@ -74,7 +74,7 @@ class Rectangle(Base):
     def display(self):
         """comments"""
 
-    rec = ""
+        rec = ""
         if self.__width is 0 or self.__height is 0:
             return rec
         else:
