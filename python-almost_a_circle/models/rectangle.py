@@ -78,7 +78,7 @@ class Rectangle(Base):
             return
         else:
             for z in range(self.__y):
-                print()
+                print(" ")
             for i in range(self.__height):
                 for a in range(self.__width):
                     print("" * self.__x, end="")
