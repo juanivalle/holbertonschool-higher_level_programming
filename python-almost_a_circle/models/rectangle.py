@@ -70,3 +70,16 @@ class Rectangle(Base):
 
         area = self.__width * self.__height
         return(area)
+
+    def display(self):
+        """comments"""
+
+        if self.__width is 0 or self.__height is 0:
+            return
+        else:
+            for i in range(self.__height):
+                for a in range(self.__width):
+                    print("#", end="")
+                if (i < self.__height -1):
+                    print()
+        return
