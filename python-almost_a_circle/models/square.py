@@ -12,7 +12,7 @@ class Square(Rectangle):
         """comments"""
 
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
         """comments"""
 
@@ -30,3 +30,14 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """comments"""
+        
+        if args:
+            ats = ['id', 'width', 'height', 'x', 'y']
+            for c in range(len(args)):
+                setattr(self, ats[c], args[c])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
