@@ -33,7 +33,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """comments"""
-        
+
         if args:
             ats = ['id', 'size', 'x', 'y']
             for c in range(len(args)):
@@ -41,3 +41,13 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """comments"""
+
+        return {
+                'id': self.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
+                }
