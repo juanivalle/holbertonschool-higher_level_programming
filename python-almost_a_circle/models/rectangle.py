@@ -91,7 +91,7 @@ class Rectangle(Base):
         e = self.__height
         return(f"[Rectangle] ({id}) {a:d}/{b:d} - {c:d}/{e:d}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """comments"""
         if args:
             ats = ['id', 'width', 'height', 'x', 'y']
