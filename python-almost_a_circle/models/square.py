@@ -11,7 +11,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """comments"""
 
-        super().__init__(id, x, y, size, size)
+        super().__init__(id, x, y, width, height)
     
     def __str__(self):
         """comments"""
