@@ -35,7 +35,7 @@ class Square(Rectangle):
         """comments"""
         
         if args:
-            ats = ['id', 'width', 'height', 'x', 'y']
+            ats = ['id', 'size', 'x', 'y']
             for c in range(len(args)):
                 setattr(self, ats[c], args[c])
         else:
