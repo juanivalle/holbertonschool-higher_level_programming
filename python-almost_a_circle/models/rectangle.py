@@ -96,4 +96,4 @@ class Rectangle(Base):
         if args:
             ats = ['id', 'width', 'height', 'x', 'y']
             for c in range(len(args)):
-                setattr(self, ats[i], args[i])
+                setattr(self, ats[c], args[c])
