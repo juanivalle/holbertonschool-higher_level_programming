@@ -20,4 +20,4 @@ class Square(Rectangle):
         a = self.x
         b = self.y
         c = self.width
-        return(f"[Rectangle] ({id}) {a:d}/{b:d} - {c:d}")
+        return(f"[Square] ({id}) {a:d}/{b:d} - {c:d}")
