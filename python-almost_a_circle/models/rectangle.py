@@ -102,6 +102,8 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """comments"""
+
         return {
                 'id': self.id,
                 'width': self.width,
