@@ -11,8 +11,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """comments"""
 
-        super().__init__(id, x, y, width, height)
-        self.size = self.width
+        super().__init__(size, size, x, y, id)
     
     def __str__(self):
         """comments"""
@@ -20,7 +19,7 @@ class Square(Rectangle):
         id = self.id
         a = self.x
         b = self.y
-        c = self.size
+        c = self.width
         return(f"[Square] ({id}) {a:d}/{b:d} - {c:d}")
 
     @property
