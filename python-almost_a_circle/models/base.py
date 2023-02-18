@@ -52,3 +52,17 @@ class Base:
             return(empty)
         else:
             return json.loads(json_string)
+    
+    @classmethod
+    def create(cls, **dictionary):
+        """comments"""
+
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            return None
+
+        dummy.update(**dictionary)
+        return dummy
