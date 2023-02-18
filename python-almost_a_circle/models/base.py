@@ -76,7 +76,7 @@ class Base:
             with open(filename, 'r') as f:
                 json_string = f.read()
         except FileNotFoundError:
-            return []
+            pass
 
         list_dicts = from_json_string(json_string)
         instances = []
