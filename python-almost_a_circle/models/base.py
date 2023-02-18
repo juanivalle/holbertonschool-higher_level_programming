@@ -72,15 +72,12 @@ class Base:
         """comments"""
 
         filename = cls.__name__ + ".json"
+        instances = []
         try:
             with open(filename, 'r') as f:
-                json_string = f.read()
+                json_string = cls.from_json_string(f.read())
+                for dict in json_string:
+                    instances.append(cls.create(**dict))
         except FileNotFoundError:
             pass
-
-        list_dicts = from_json_string(json_string)
-        instances = []
-        for dict in list_dicts:
-            instances.append(cls.create(**dict))
-
         return instances
