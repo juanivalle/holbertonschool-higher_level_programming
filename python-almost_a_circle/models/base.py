@@ -4,6 +4,7 @@ comments
 """
 import json
 
+
 class Base:
     """
     comments
@@ -20,11 +21,12 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
-
+    
+    @staticmethod
     def to_json_string(list_dictionaries):
         """comments"""
 
         if list_dictionaries is None:
-            return
+            return("[]")
         else:
             return json.dumps(list_dictionaries)
