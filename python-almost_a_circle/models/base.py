@@ -44,3 +44,10 @@ class Base:
 
         with open(filename, mode="w") as file:
             file.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return("[]")
+        else:
+            return json.load(json_string)
