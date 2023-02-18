@@ -52,7 +52,7 @@ class Base:
             return(empty)
         else:
             return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """comments"""
@@ -66,3 +66,21 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """comments"""
+
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r') as f:
+                json_string = f.read()
+        except FileNotFoundError:
+            return []
+
+        list_dicts = from_json_string(json_string)
+        instances = []
+        for dict in list_dicts:
+            instances.append(cls.create(**dict))
+
+        return instances
