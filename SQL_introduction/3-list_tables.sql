@@ -1,0 +1,2 @@
+-- SQL proyect
+SHOW TABLES;
