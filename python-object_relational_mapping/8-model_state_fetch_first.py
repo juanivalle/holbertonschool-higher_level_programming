@@ -8,8 +8,8 @@ if __name__ == '__main__':
 
     mysql_username, mysql_password, database_name = argv[1], argv[2], argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-            .format(mysql_username, mysql_password, database_name))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        mysql_username, mysql_password, database_name))
 
     Session = sessionmaker(bind=engine)
 
