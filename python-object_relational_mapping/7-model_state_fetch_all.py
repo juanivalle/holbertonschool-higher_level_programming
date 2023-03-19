@@ -2,19 +2,14 @@
 """ task 7 """
 
 from model_state import Base, State
-import sys
+from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import select
 
 if __name__ == '__main__':
 
-    mysql_user = sys.argv[1]
-    mysql_pass = sys.argv[2]
-    mysql_db = sys.argv[3]
-
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        mysql_user, mysql_pass, mysql_db))
+        argv[1], argv[2], argv[3]))
 
     Base.metadata.create_all(engine)
 
