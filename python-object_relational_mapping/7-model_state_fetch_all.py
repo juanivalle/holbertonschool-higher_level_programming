@@ -11,8 +11,7 @@ if __name__ == "__main__":
     mysql_pass = sys.argv[2]
     mysql_db = sys.argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(mysql_user, mysql_pass, mysql_db),
+    engine = create_engine(f'mysql+mysqldb://{mysql_user}:{mysql_pass}@localhost:3306/{mysql_db}',
                            pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
@@ -23,4 +22,4 @@ if __name__ == "__main__":
     states = session.query(State).order_by(State.id).all()
 
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        print(f"{state.id}: {state.name}")
