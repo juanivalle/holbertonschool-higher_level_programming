@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Task 0 get all states"""
+"""
+Task 0 get all states
+"""
 
 import MySQLdb
 import sys
