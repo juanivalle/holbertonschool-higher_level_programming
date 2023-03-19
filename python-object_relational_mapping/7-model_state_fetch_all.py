@@ -1,21 +1,26 @@
 #!/usr/bin/python3
 """ task 7 """
 
-from model_state import Base, State
-from sys import argv
+import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+    mysql_user = sys.argv[1]
+    mysql_pass = sys.argv[2]
+    mysql_db = sys.argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        argv[1], argv[2], argv[3]))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+                           format(mysql_user, mysql_pass, mysql_db),
+                           pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(State.id):
-        print(f"{state.id}: {state.name}")
-    session.close()
+    states = session.query(State).order_by(State.id).all()
+
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
