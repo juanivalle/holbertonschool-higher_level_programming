@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" task 8 """
-
+"""task 8 print first state"""
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
