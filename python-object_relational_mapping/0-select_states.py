@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Task 0 get all states"""
+
+import MySQLdb
+import sys
+
 if __name__ == '__main__':
-    import MySQLdb
-    import sys
     arg = sys.argv
     db = MySQLdb.connect(host=host="localhost", port=3306, 
             user=arg[1],passwd=arg[2], db=arg[3])
