@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ task 7 """
 
+from model_state import Base, State
+import sys
+from sqlalchemy import (create_engine)
+from sqlalchemy.orm import Session
+from sqlalchemy import select
+
 if __name__ == '__main__':
-    from model_state import Base, State
-    import sys
-    from sqlalchemy import (create_engine)
-    from sqlalchemy.orm import Session
-    from sqlalchemy import select
 
     mysql_user = sys.argv[1]
     mysql_pass = sys.argv[2]
