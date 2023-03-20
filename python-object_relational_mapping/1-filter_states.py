@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ task 1 """
 
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    import sys
-    import MySQLdb
     arg = sys.argv
-    db = MySQLdb.connect(host=host="localhost", port=3306, 
+    db = MySQLdb.connect(host="localhost", port=3306, 
             user=arg[1],passwd=arg[2], db=arg[3])
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC")
