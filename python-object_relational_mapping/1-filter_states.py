@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          user=arg[1], passwd=arg[2], db=arg[3])
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name"
-                   "LIKE BINARY 'N%' ORDER BY id ASC")
+                   "LIKE 'N%' ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
