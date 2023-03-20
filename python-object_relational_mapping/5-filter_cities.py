@@ -10,10 +10,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=arg[1], passwd=arg[2], db=arg[3])
     cursor = db.cursor()
-    cursor.execute("SELECT cities.name FROM states \
-                   JOIN cities ON state_id = states.id \
-                   WHERE states.name LIKE %s \
-                   ORDER BY cities.id ASC".format(arg[4]))
+    cursor.execute("SELECT cities.name \
+                   FROM states JOIN cities ON state_id=states.id \
+                   WHERE states.name LIKE %s ORDER BY cities.id", (arg[4],))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
