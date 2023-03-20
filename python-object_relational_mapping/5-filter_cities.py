@@ -12,7 +12,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT cities.name \
                    FROM states JOIN cities ON state_id=states.id \
-                   WHERE states.name LIKE %s ORDER BY cities.id", (arg[4],))
+                   WHERE states.name LIKE %s ORDER BY cities.id",(arg[4],))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
